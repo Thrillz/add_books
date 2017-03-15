@@ -22,16 +22,29 @@ function ValidationEvent() {
     return false;
   }*/
 
-  if (title == "") {
-    document.getElementById('title-error').innerHTML = "Title field is required";
-  }
-  if (author == "") {
-    document.getElementById('author-error').innerHTML = "Author field is required";
-  }
-  if (yop.length < 4) {
-    document.getElementById('yop-error').innerHTML = "Year of publication field is required";
-  }
-  if (isbn == "") {
-    document.getElementById('isbn-error').innerHTML = "Isbn field is required";
+  var titleCheck = true;
+  var authorCheck = true;
+  var yopCheck = true;
+  var isbnCheck = true;
+
+    if (title == "") {
+      document.getElementById('title-error').innerHTML = "Title field is required";
+      titleCheck = false;
+    }
+    if (author == "") {
+      document.getElementById('author-error').innerHTML = "Author field is required";
+      authorCheck = false;
+    }
+    if (yop.length < 4) {
+      document.getElementById('yop-error').innerHTML = "Year of publication field is required";
+      yopCheck = false;
+    }
+    if (isbn == "") {
+      document.getElementById('isbn-error').innerHTML = "Isbn field is required";
+      isbnCheck = false;
+    }
+
+  if (titleCheck == true && authorCheck == true && yopCheck == true && isbnCheck == true) {
+    console.log(title + " " + author + " " + yop + " " + isbn);
   }
 }
