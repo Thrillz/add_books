@@ -21,24 +21,24 @@
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <form role="form" onsubmit="return ValidationEvent()">
+                        <form novalidate>
                             <div class="form-group">
                               <label>Title</label>
-                              <input class="form-control" placeholder="Enter Title of Book" id="title">
+                              <input class="form-control" placeholder="Enter Title of Book" id="title"><span id="title-error" class="text-danger"></span>
                             </div>
                             <div class="form-group">
                               <label>Author</label>
-                              <input class="form-control" placeholder="Enter Author" id="author">
+                              <input class="form-control" placeholder="Enter Author" id="author"><span id="author-error" class="text-danger"></span>
                             </div>
                             <div class="form-group">
                               <label>Year of Publication</label>
-                              <input class="form-control" placeholder="e.g 1990" id="yop">
+                              <input class="form-control" placeholder="e.g 1990" id="yop"><span id="yop-error" class="text-danger"></span>
                             </div>
                             <div class="form-group">
                               <label>ISBN</label>
-                              <input class="form-control" placeholder="190-XX-XX" id="isbn">
+                              <input class="form-control" placeholder="190-XX-XX" id="isbn"><span id="isbn-error" class="text-danger"></span>
                             </div>
-                          <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane fa-fw"></i>Submit</button>
+                          <button class="btn btn-primary" onclick="ValidationEvent()"><i class="fa fa-paper-plane fa-fw"></i>Submit</button>
                             <button type="reset" class="btn btn-warning">Clear Field</button>
                         </form>
                     </div>
